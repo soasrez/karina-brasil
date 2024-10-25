@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/* Reset and base styles */
+
+:root {
+    --color-01: #B5A0C9
+    --color-02: #725A7A
+    --color-03: #41384E
+    --color-04: #C6CBD1
+    --color-05: #A6A2A1
+   
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-01);
+}

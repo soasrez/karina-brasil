@@ -1,0 +1,165 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0077be;
+}
+
+/* Main content styles */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+h1, h2, h3, h4 {
+  color: #0077be;
+  margin-bottom: 1rem;
+}
+
+.introContent {
+  text-align: center;
+}
+
+.introTitle {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.introButton {
+  margin-top: 1.5rem;
+}
+
+.introButton a {
+  display: inline-block;
+  background-color: #0077be;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.introButton a:hover {
+  background-color: #005fa3;
+}
+
+/* Main content boxes */
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.mainTitle {
+  grid-column: 1 / -1;
+}
+
+.box1, .box2 {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.box1 ul, .box2 ul {
+  list-style-position: inside;
+  margin-left: 1rem;
+}
+
+/* About section */
+.aboutContent {
+  background-color: #f0f8ff;
+}
+
+/* Other content and FAQ sections */
+.otherContent, .FAQ {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.question01, .question02, .question03 {
+  background-color: #f0f8ff;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.question01:hover, .question02:hover, .question03:hover {
+  background-color: #e1f1ff;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    margin-top: 1rem;
+  }
+
+  .mainContent, .otherContent, .FAQ {
+    grid-template-columns: 1fr;
+  }
+}
