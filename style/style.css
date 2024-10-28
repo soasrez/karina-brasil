@@ -93,19 +93,27 @@ main {
   }
 
   /* Intro section */
+.pic-01 {
+    justify-content: center;
+}
 .intro-content {
     text-align: center;
-    height: 89vh;
+    height: 80vh;
+    background-image: url(../img/psychologist1.png); 
+    background-repeat: no-repeat;
+    background-size: auto;
     
   }
 
   .intro-content > h2 {
+    text-align: right;
     font: var(--font-main);
     font-size: 42px;
     font-weight: bold;
   }
 
   .intro-content > h3 {
+    text-align: right;
     color: var(--color-03);
     font: var(--font-main);
     font-size: 38px;
@@ -113,9 +121,10 @@ main {
   }
   
   .intro-title {
+    text-align: right;
     font-size: 100px;
     color: var(--color-primary);
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
   
   .intro-button {
