@@ -1,15 +1,22 @@
-@charset "UTF-8";
+@charset "UTF-8"; /* Define a codificação da folha de estilo para Unicode UTF-8 */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Passion+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap'); /* Work Sans */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Passion+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap'); /* Cormomant Garamond */
 
-/* Reset and base styles */
 
 :root {
-    --color-01: #B5A0C9
-    --color-02: #725A7A
-    --color-03: #41384E
-    --color-04: #C6CBD1
-    --color-05: #A6A2A1
+    /* Color palette */
+    --color-01: #B5A0C9;
+    --color-02: #725A7A;
+    --color-03: #41384E;
+    --color-04: #C6CBD1;
+    --color-05: #A6A2A1;
+
+    /* Typography */
+    --font-main:"Work Sans", sans-serif;
+    --font-heading:"Cormorant Garamond", serif;
    
 }
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -17,5 +24,142 @@
 }
 
 body {
-    background-color: var(--color-01);
+    
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--color-04);
+    background-color: var(--color-02);
 }
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+    color: var(--color-01);
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  
+/* Header styles */
+header {
+    background-color: var(--color-02);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    max-height: 50px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav li {
+    margin-left: 1.5rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--color-03);
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: var(--color-01);
+  }
+
+  /* Main content styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  section {
+    background-color: var(--color-02);
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.199);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Intro section */
+.intro-content {
+    text-align: center;
+    height: 89vh;
+    
+  }
+
+  .intro-content > h2 {
+    font: var(--font-main);
+    font-size: 42px;
+    font-weight: bold;
+  }
+
+  .intro-content > h3 {
+    color: var(--color-03);
+    font: var(--font-main);
+    font-size: 38px;
+    
+  }
+  
+  .intro-title {
+    font-size: 100px;
+    color: var(--color-primary);
+    margin-top: 10rem;
+  }
+  
+  .intro-button {
+    margin-top: 1.5rem;
+  }
+  
+  .intro-button a {
+    display: inline-block;
+    background-color: var(--color-03);
+    color: var(--color-04);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 2s ease-in-out;
+    transition: color 1s ease;
+  }
+  
+  .intro-button a:hover {
+    background-color: var(--color-01);
+    color: var(--color-03);
+    
+  }
+
+  /* Main content section */
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .main-title {
+    grid-column: 1 / -1;
+  }
+  
+  .box1, .box2 {
+    background-color: var(--color-03);
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .box1 ul, .box2 ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+  }
+  
+  
