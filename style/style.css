@@ -79,7 +79,7 @@ header {
 
   /* Main content styles */
 main {
-    max-width: 1200px;
+    max-width: px;
     margin: 0 auto;
     padding: 2rem;
   }
@@ -87,7 +87,7 @@ main {
   section {
     background-color: var(--color-02);
     border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.199);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.199); */
     padding: 2rem;
     margin-bottom: 2rem;
   }
@@ -97,8 +97,11 @@ main {
     justify-content: center;
 }
 .intro-content {
+    
     text-align: center;
     height: 80vh;
+    width: 100%;
+    background-color: var(--color-02);
     background-image: url(../img/psychologist1.png); 
     background-repeat: no-repeat;
     background-size: auto;
@@ -106,14 +109,16 @@ main {
   }
 
   .intro-content > h2 {
-    text-align: right;
+    text-align: center;
+    
     font: var(--font-main);
     font-size: 42px;
     font-weight: bold;
   }
 
   .intro-content > h3 {
-    text-align: right;
+    text-align: center;
+    
     color: var(--color-03);
     font: var(--font-main);
     font-size: 38px;
@@ -121,7 +126,8 @@ main {
   }
   
   .intro-title {
-    text-align: right;
+    text-align: center;
+    
     font-size: 100px;
     color: var(--color-primary);
     margin-top: 5rem;
