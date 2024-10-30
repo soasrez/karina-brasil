@@ -10,6 +10,7 @@
     --color-03: #41384E;
     --color-04: #C6CBD1;
     --color-05: #A6A2A1;
+    --white-color: #E9E2EF;
 
     /* Typography */
     --font-main:"Work Sans", sans-serif;
@@ -23,12 +24,17 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
 body {
-    
+    scroll-snap-type: y mandatory; /* O Safari exige a definição no body */
+    min-height: 100vh;
     font-family: var(--font-main);
     line-height: 1.6;
-    color: var(--color-04);
-    background-color: var(--color-02);
+    color: var(--white-color);
+    background-color: var(--white-color);
 }
 
 /* Typography */
@@ -45,12 +51,14 @@ h1, h2, h3, h4, h5, h6 {
   
 /* Header styles */
 header {
-    background-color: var(--color-02);
+   border: red solid 1px;
+    background-color: var(--color-01);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 50px;
   }
   
   .logo img {
@@ -77,19 +85,52 @@ header {
     color: var(--color-01);
   }
 
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #3c294244;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .sidebar li{
+    width: 100%;
+  }
+
+  .sidebar a{
+    width: 100%;
+  }
+
   /* Main content styles */
 main {
+    border: rgb(0, 255, 21) solid 1px;
     max-width: px;
     margin: 0 auto;
-    padding: 2rem;
+    
+  }
+  
+  .section {
+    scroll-snap-align: start;
+    height: 70vh;
   }
   
   section {
-    background-color: var(--color-02);
+    background-color: var(--color-01);
+    border: red solid 1px;
     border-radius: 8px;
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.199); */
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin
+    
+    
   }
 
   /* Intro section */
@@ -97,39 +138,68 @@ main {
     justify-content: center;
 }
 .intro-content {
-    
+    border: red solid 1px;
     text-align: center;
-    height: 80vh;
-    width: 100%;
-    background-color: var(--color-02);
+    height: 89vh;
+    width: 100vw;
+    background-color: var(--white-color);
     background-image: url(../img/psychologist1.png); 
     background-repeat: no-repeat;
     background-size: auto;
     
   }
+/* FLOATING ANIMATION
+  img {
+    animation-duration: 12s;
+    animation-name: idle;
+  }
+
+  @keyframes idle {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+      transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+  }
+*/
 
   .intro-content > h2 {
     text-align: center;
-    
+    background-image: linear-gradient(to right, var(--color-02), var(--color-03));
+    background-clip: text;
+    color: transparent;
     font: var(--font-main);
-    font-size: 42px;
-    font-weight: bold;
+    
+    font-size: 48px;
+    
   }
 
   .intro-content > h3 {
     text-align: center;
-    
+    margin-top: 2em;
     color: var(--color-03);
-    font: var(--font-main);
-    font-size: 38px;
+    
+    font-size: 36px;
     
   }
   
   .intro-title {
     text-align: center;
+    background-image: linear-gradient(to right, var(--color-02), var(--color-03));
+    background-clip: text;
+    color: transparent;
+    width:fit-content;
+    margin: auto;
     
-    font-size: 100px;
-    color: var(--color-primary);
+    font-size: 124px;
+    
     margin-top: 5rem;
   }
   
@@ -139,24 +209,27 @@ main {
   
   .intro-button a {
     display: inline-block;
-    background-color: var(--color-03);
-    color: var(--color-04);
+    background-color: var(--color-01);
+    color: var(--color-03);
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     border-radius: 25px;
     font-weight: bold;
-    transition: background-color 2s ease-in-out;
+    transition: background-color 1s ease-in-out;
     transition: color 1s ease;
+    box-shadow: 3px 2px 7px rgba(0, 0, 0, 0.459);
   }
   
   .intro-button a:hover {
-    background-color: var(--color-01);
-    color: var(--color-03);
+    background-color: var(--color-03);
+    color: var(--white-color);
+    
     
   }
 
   /* Main content section */
 .main-content {
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;

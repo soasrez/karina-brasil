@@ -19,23 +19,37 @@
         <img src="../img/logo/Karina_placeholder_logo.png" alt="Logo">
       </div>
       <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
+        <ul class="sidebar">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projects.html">Projetos</a></li>
           <li><a href="articles.html">Articles</a></li>
           <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projects.html">Projetos</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="41384E"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         </ul>
       </nav>
     </header>
 
     <main>
+      <!--
+      <div class="bg-image">
+        <figure> <img src="../img/psychologist1.png" alt=""></figure>
+      </div>
+      -->
       
         <!-- Intro Section -->
         
           <section class="intro-content">
+            
             <h1 class="intro-title">Karina Brasil</h1>
             <h2> Psicóloga Clínica - CRP-08/33621</h2>
             <h3> Especialista em Terapia Cognitivo Comportamental e Neurociências</h3><br>
+            <p>Para quem busca apoio, compreensão e clareza.</p>
             <p>
               Sou psicóloga clínica, com especialização em Terapia Cognitivo Comportamental e em Neurociências e Comportamento Humano. Atuo como palestrante e supervisora clínica em TCC.
             </p>
@@ -123,6 +137,13 @@
       </section>
 
       </main>
+
+      <script>
+        function showSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display = 'flex'
+        }
+      </script>
 
     <!-- Footer -->
     <footer>
