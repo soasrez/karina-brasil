@@ -139,11 +139,11 @@ main {
     
     text-align: center;
     height: 89vh;
-    width: 100vw;
+    width: 100%;
     background-color: var(--white-color);
     background-image: url(../img/psychologist1.png); 
     background-repeat: no-repeat;
-    background-size: auto;
+    background-blend-mode:overlay;
  
     
   }
@@ -224,6 +224,9 @@ main {
     color: var(--white-color);
     
     
+  }
+  img {
+    width 
   }
 
   @media screen and (max-width: 768px) {
