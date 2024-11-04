@@ -144,6 +144,7 @@ main {
     background-image: url(../img/psychologist1.png); 
     background-repeat: no-repeat;
     background-size: auto;
+ 
     
   }
 /* FLOATING ANIMATION
@@ -223,6 +224,38 @@ main {
     color: var(--white-color);
     
     
+  }
+
+  @media screen and (max-width: 768px) {
+    .intro-content > h2 {
+      font-size: 2.5rem;
+    }
+
+    .intro-content > h3 {
+      font-size: 1.75rem;
+    }
+
+    .intro-title {
+      font-size: 3.5rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .intro-content > h2 {
+      font-size: 2rem;
+    }
+
+    .intro-content > h3 {
+      font-size: 1.5rem;
+    }
+
+    .intro-title {
+      font-size: 2.5rem;
+    }
+
+    .intro-button a {
+      padding: 0.5rem 1rem;
+    }
   }
 
   /* Main content section */
